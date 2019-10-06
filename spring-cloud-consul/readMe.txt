@@ -1,1 +1,1 @@
-consul_1.2.1�İ汾
+consul_1.2.1 version
