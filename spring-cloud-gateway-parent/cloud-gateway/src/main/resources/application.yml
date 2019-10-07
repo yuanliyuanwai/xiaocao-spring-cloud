@@ -1,0 +1,44 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: neo_route
+        uri: http://www.xiaocao.in
+        predicates:
+          - Path=/spring-cloud
+#      - id: time_route
+#        uri: http://xiaocao.in
+#        predicates:
+#        - After=2018-01-20T06:06:06+08:00[Asia/Shanghai]
+#        - Before=2018-01-20T06:06:06+08:00[Asia/Shanghai]
+#        - Between=2018-01-20T06:06:06+08:00[Asia/Shanghai], 2019-01-20T06:06:06+08:00[Asia/Shanghai]
+#      - id: cookie_route
+#        uri: http://xiaocao.in
+#        predicates:
+#        - Cookie=ityouknow, kee.e
+#      - id: header_route
+#        uri: http://xiaocao.in
+#        predicates:
+#        - Header=X-Request-Id, \d+
+#      - id: host_route
+#        uri: http://xiaocao.in
+#        predicates:
+#        - Host=**.xiaocao.in
+#      - id: method_route
+#        uri: http://xiaocao.in
+#        predicates:
+#        - Method=GET
+#      - id: host_route
+#        uri: http://xiaocao.in
+#        predicates:
+#        - Path=/foo/{segment}
+#      - id: query_route
+#        uri: http://xiaocao.in
+#        predicates:
+#         - Query=keep, pu.
+#      - id: remoteaddr_route
+#        uri: http://xiaocao.in
+#        predicates:
+#        - RemoteAddr=192.168.126.218/24
